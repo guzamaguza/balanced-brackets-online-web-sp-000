@@ -1,7 +1,8 @@
 
 function isBalanced(expr){
   var S = [];
-  if(expr.length %2 == 0){
+  var len = expr.length;
+  if((len%2) == 0){
     continue
   }else{
     return false
