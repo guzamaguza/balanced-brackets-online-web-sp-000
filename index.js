@@ -3,12 +3,15 @@ function isBalanced(expr){
   var S = [];
   for(let i=0;i<expr.length;i++){
     var currentChar = expr[i];
+    var prevChar = expr[i-1];
+    
     if(currentChar === '{' || currentChar === '(' || currentChar === '[' ){
       S.push(currentChar);
     }
+
     if(currentChar === '}' || currentChar === ')' || currentChar === ']' ){
       if(currentChar === '}'){
-        if(S.includes('{')){
+        if(prevChar === '{'){
           S.push(currentChar);
           continue
         }else{
@@ -16,7 +19,7 @@ function isBalanced(expr){
           break
         }
       }else if(currentChar === ')'){
-        if(S.includes('(')){
+        if(prevChar === '('){
           S.push(currentChar);
           continue
         }else{
@@ -24,7 +27,7 @@ function isBalanced(expr){
           break
         }
       }else if(currentChar === ']'){
-        if(S.includes('[')){
+        if(prevChar === '['){
           S.push(currentChar);
           continue
         }else{
