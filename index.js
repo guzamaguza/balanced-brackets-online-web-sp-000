@@ -4,7 +4,6 @@ function isBalanced(expr){
   var len = expr.length;
   if((len%2) != 0){
     return false
-    break
   }else{
 
 
