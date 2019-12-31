@@ -1,3 +1,4 @@
+
 function isBalanced(expr){
   var S = [];
   for(let i=0;i<expr.length;i++){
@@ -31,8 +32,6 @@ function isBalanced(expr){
     }
   }
 }
-
-
 
 
 // Algorithm:
