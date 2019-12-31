@@ -2,12 +2,11 @@
 function isBalanced(expr){
   var S = [];
   var len = expr.length;
-  if((len%2) == 0){
-    continue
-  }else{
+  if((len%2) != 0){
     return false
     break
-  }
+  }else{
+    
 
   for(let i=0;i<expr.length;i++){
     var currentChar = expr[i];
@@ -43,7 +42,7 @@ function isBalanced(expr){
           break
         }
       }
-
+}
     }
     return true
   }
