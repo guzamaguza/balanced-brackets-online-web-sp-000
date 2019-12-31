@@ -37,6 +37,7 @@ function isBalanced(expr){
       }
 
     }
+    return true 
   }
 }
 
