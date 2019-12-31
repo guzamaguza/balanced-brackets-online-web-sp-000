@@ -9,6 +9,7 @@ function isBalanced(expr){
     if(currentChar === '}' || currentChar === ')' || currentChar === ']' ){
       if(currentChar === '}'){
         if(S.includes('{')){
+          S.push(currentChar);
           continue
         }else{
           return false
@@ -16,6 +17,7 @@ function isBalanced(expr){
         }
       }else if(currentChar === ')'){
         if(S.includes('(')){
+          S.push(currentChar);
           continue
         }else{
           return false
@@ -23,12 +25,14 @@ function isBalanced(expr){
         }
       }else if(currentChar === ']'){
         if(S.includes('[')){
+          S.push(currentChar);
           continue
         }else{
           return false
           break
         }
       }
+      
     }
   }
 }
