@@ -6,7 +6,7 @@ function isBalanced(expr){
     return false
   }else{
 
-
+    let prevChar = '';
   for(let i=0;i<expr.length;i++){
     var currentChar = expr[i];
     var prevChar = expr[i-1];
