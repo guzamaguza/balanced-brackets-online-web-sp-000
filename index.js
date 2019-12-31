@@ -17,7 +17,7 @@ function isBalanced(expr){
 
     if(currentChar === '}' || currentChar === ')' || currentChar === ']' ){
       if(currentChar === '}'){
-        if(prevChar === '{'){
+        if(prevChar === '{' || expr[i-3] === '{'){
           S.push(currentChar);
           continue
         }else{
@@ -25,7 +25,7 @@ function isBalanced(expr){
           break
         }
       }else if(currentChar === ')'){
-        if(prevChar === '('){
+        if(prevChar === '(' || expr[i-3] === '('){
           S.push(currentChar);
           continue
         }else{
@@ -33,7 +33,7 @@ function isBalanced(expr){
           break
         }
       }else if(currentChar === ']'){
-        if(prevChar === '['){
+        if(prevChar === '[' || expr[i-3] === '['){
           S.push(currentChar);
           continue
         }else{
