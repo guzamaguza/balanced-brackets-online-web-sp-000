@@ -8,29 +8,29 @@ function isBalanced(expr){
     if(currentChar === '}' || currentChar === ')' || currentChar === ']' ){
       if(currentChar === '}'){
         if(S.includes('{')){
-          continue 
+          continue
         }else{
-          return false 
-          break 
+          return false
+          break
         }
       }else if(currentChar === ')'){
         if(S.includes('(')){
-          continue 
+          continue
         }else{
-          return false 
-          break 
+          return false
+          break
         }
       }else if(currentChar === ']'){
         if(S.includes('[')){
-          continue 
+          continue
         }else{
-          return false 
-          break 
+          return false
+          break
         }
       }
     }
   }
-  
+
 }
 
 
