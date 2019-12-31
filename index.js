@@ -1,10 +1,17 @@
 
 function isBalanced(expr){
   var S = [];
+  if(expr.length %2 == 0){
+    continue 
+  }else{
+    return false
+    break
+  }
+
   for(let i=0;i<expr.length;i++){
     var currentChar = expr[i];
     var prevChar = expr[i-1];
-
+    
     if(currentChar === '{' || currentChar === '(' || currentChar === '[' ){
       S.push(currentChar);
     }
